@@ -70,7 +70,6 @@ ul li {
     border-radius: 8px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
-/* Ogólne ustawienia */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
@@ -79,7 +78,6 @@ body {
     background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
 }
 
-/* Nagłówek */
 header {
     text-align: center;
     padding: 40px 20px;
@@ -99,7 +97,6 @@ header p {
     font-size: 1.1em;
 }
 
-/* Sekcje */
 #photos, #cv {
     margin-top: 50px;
     padding: 20px;
@@ -124,7 +121,6 @@ h2::after {
     margin-top: 5px;
 }
 
-/* Tabela */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -154,7 +150,6 @@ tbody tr:hover {
     border-radius: 5px;
 }
 
-/* CV Sekcja */
 .cv-container {
     background-color: #ffffff;
     padding: 25px;
@@ -195,7 +190,6 @@ tbody tr:hover {
     margin-right: 8px;
 }
 
-/* Animacje przycisków i hover */
 button, .btn {
     background-color: #0073e6;
     color: #fff;
@@ -212,7 +206,6 @@ button:hover, .btn:hover {
     transform: translateY(-3px);
 }
 
-/* Responsive */
 @media (max-width: 768px) {
     header {
         padding: 20px 10px;
@@ -250,6 +243,6 @@ button:hover, .btn:hover {
 
 .cv-container ul li::before {
     content: "• ";
-    color: #0073e6;  /* Kolor kropki */
+    color: #0073e6;  
     font-weight: bold;
 }
