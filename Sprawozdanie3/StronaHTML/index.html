@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Przykładowa Strona z Lorem Picsum</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Dynamiczna Galeria ze Zdjęciami Lorem Picsum</h1>
+        <p>Ta strona prezentuje przykładową galerię zdjęć oraz informacje wygenerowane losowo.</p>
+    </header>
+
+    <section id="photos">
+        <h2>Galeria Zdjęć</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Zdjęcie</th>
+                    <th>Tytuł</th>
+                    <th>Opis</th>
+                </tr>
+            </thead>
+            <tbody id="photoTable">
+            </tbody>
+        </table>
+    </section>
+
+    <script>
+        async function fetchPhotos() {
+            const tableBody = document.getElementById('photoTable');
+
+            for (let i = 1; i <= 20; i++) {
+                const row = document.createElement('tr');
+
+                const imgCell = document.createElement('td');
+                const img = document.createElement('img');
+                img.src = `https://picsum.photos/seed/${i}/100/100`;
+                img.alt = `Losowe zdjęcie ${i}`;
+                img.className = 'photo-img';
+                imgCell.appendChild(img);
+
+                const titleCell = document.createElement('td');
+                titleCell.textContent = `Przykładowy tytuł ${i}`;
+
+                const descCell = document.createElement('td');
+                descCell.textContent = `To jest przykładowy opis dla zdjęcia ${i}. To zdjęcie pochodzi z Lorem Picsum.`;
+
+                row.appendChild(imgCell);
+                row.appendChild(titleCell);
+                row.appendChild(descCell);
+
+                tableBody.appendChild(row);
+            }
+        }
+
+        window.onload = fetchPhotos;
+    </script>
+</body>
+</html>
+
